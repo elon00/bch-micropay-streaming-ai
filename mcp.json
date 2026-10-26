@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-micropay-streaming-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHSTREAM"
+      },
+      "tools": [
+        {
+          "name": "verify_bchstream_invariants",
+          "description": "Verifies deterministic invariants for BCH MicroPay Streaming AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchstream_action",
+          "description": "Executes authenticated Payments state transition."
+        }
+      ]
+    }
+  }
+}
